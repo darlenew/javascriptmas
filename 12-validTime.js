@@ -1,12 +1,11 @@
 function validTime(str) {
     [hours, minutes] = str.split(':').map(x => parseInt(x))
     
-    if ((hours > 0) && (hours < 24) && (minutes > 0) && (minutes < 59)) {
+    if ((hours <= 23) && (minutes <= 59)) {
         return true
     }
     return false
 }
-
 
 
 /**
