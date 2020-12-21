@@ -2,7 +2,6 @@
 function nextHandler() {
     let nextButton = document.getElementsByClassName("next")[0]
     let cards = document.getElementsByClassName("card")
-    
     let currentIndex = -1;
     for (let i=0; i < cards.length; i++) {
         if (cards[i].classList.contains("current")) {
@@ -11,7 +10,7 @@ function nextHandler() {
         }
     }
     
-    if (currentIndex < cards.length) {
+    if (currentIndex < (cards.length - 1)) {
         cards[currentIndex].classList.remove("current")
         cards[currentIndex+1].classList.add("current")
         
@@ -36,7 +35,7 @@ function nextHandler() {
 }
 
 function prevHandler() {
-    let prevButton = document.getElementsByClassName("previous")[0]
+    let prevButton = document.getElementsByClassName("previous")[0]    
     let cards = document.getElementsByClassName("card")
     
     // figure out which image we're currently viewing
