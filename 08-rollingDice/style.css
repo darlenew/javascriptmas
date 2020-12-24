@@ -3,19 +3,61 @@ body {
     display: flex;
 }
 
+/* https://medium.com/better-programming/creating-dice-in-flexbox-in-css-a02a5d85e516 */
+
 .dice {
     width: 90px;
     height: 90px;
     border-radius: 10px;
     background-color: #EFE5DC;
-    margin: 100px;
+    margin: 10px;
 }
 
 .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 15px;
+    width: 18px;
+    height: 18px;
+    border-radius: 72px;
     background-color: black;
-    margin: 35px;
-    
+    margin: 5px; 
 }
+
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.two {
+    display: flex;
+    justify-content: space-between;
+}
+.two .dot:nth-of-type(2){
+    align-self: flex-end;
+}
+
+.three {
+    display:flex;
+    justify-content: space-between;
+}
+.three .dot:nth-of-type(2){
+    align-self: center;
+} 
+.three .dot:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.four, .six, .five {
+    display: flex;
+    justify-content: space-between;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.five .column:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+}
+
